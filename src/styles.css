@@ -1,0 +1,153 @@
+/* Resetting default margin and padding */
+body, ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Setting up global font styles */
+  body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+  }
+  
+  /* Container styles */
+  .container {
+    max-width: 800px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  /* Header styles */
+  .header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  /* Add Todo form styles */
+  .add-todo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .add-todo input[type="text"] {
+    padding: 0.8rem;
+    border: 2px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1rem;
+    flex-grow: 1; /* Added to take up remaining space */
+  }
+  
+  .add-todo button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #35157e;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    flex-shrink: 0; /* Added to prevent button from shrinking */
+  }
+  
+  .add-todo button:hover {
+    background-color: #0056b3;
+  }
+  
+  .add-todo button svg {
+    margin-right: 0.5rem;
+  }
+  
+  /* Todos grid styles */
+  .todos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+  
+  /* Todo card styles */
+  .todo {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .todo:hover {
+    transform: translateY(-5px);
+  }
+  
+  .todo.completed {
+    opacity: 0.7;
+  }
+  
+  .todo h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .todo p {
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .todo button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #1aac00;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+  }
+  
+  .todo button:hover {
+    background-color: #00a497;
+  }
+  
+  .todo button svg {
+    margin-right: 0.5rem;
+  }
+  
+  /* Completion date styles */
+  .completion-date {
+    font-size: 0.85rem;
+    color: #888;
+  }
+  
+  /* Media query for responsive design */
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 95%; /* Adjusting container width for smaller screens */
+    }
+    
+    .add-todo {
+      flex-direction: column; /* Stack input and button vertically on smaller screens */
+    }
+    
+    .add-todo input[type="text"] {
+      width: 100%; /* Full width input field on smaller screens */
+      margin-bottom: 0.5rem; /* Adding space between input and button */
+    }
+  }
+  
